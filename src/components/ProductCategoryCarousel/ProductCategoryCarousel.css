@@ -1,0 +1,122 @@
+.category-section {
+  margin: 90px auto;
+  padding: 70px 60px;
+  max-width: 1450px;
+  background: linear-gradient(
+    135deg,
+    #0b3c5d,
+    #0f4c75,
+    #1b6ca8
+  );
+  border-radius: 36px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
+}
+
+.category-heading {
+  font-size: 42px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 45px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.category-layout {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 50px;
+  align-items: center;
+}
+
+.category-carousel {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scroll-behavior: smooth;
+}
+
+.category-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.category-carousel::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 10px;
+}
+
+/* Right card */
+.category-featured {
+  padding: 26px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15),
+    0 25px 70px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.category-slide {
+  width: 100%;
+}
+
+.category-slide h2 {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* 🔥 THIS IS THE KEY FIX */
+.category-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 40px;
+  align-items: center;
+}
+
+/* 🔥 THIS FIXES VERTICAL STACKING */
+.category-cards {
+  display: flex;
+  flex-direction: row;     /* FORCE HORIZONTAL */
+  gap: 24px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+}
+
+/* 🔥 THIS FIXES CARD SIZE */
+.category-cards .container {
+  flex: 0 0 auto;
+  width: 260px;            /* CONTROL CARD WIDTH */
+}
+
+/* Optional: hide scrollbar */
+.category-cards::-webkit-scrollbar {
+  height: 6px;
+}
+
+.category-cards::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.4);
+  border-radius: 10px;
+}
+
+/* RIGHT FEATURED CARD */
+.category-featured {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+@media (max-width: 1100px) {
+  .category-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .category-featured {
+    margin-top: 40px;
+  }
+}

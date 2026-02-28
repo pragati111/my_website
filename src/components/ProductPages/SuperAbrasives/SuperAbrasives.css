@@ -1,0 +1,152 @@
+.super-abrasives-page {
+  padding: 60px 8%;
+  color: #222;
+}
+
+/* ===== MAIN HEADING ===== */
+.super-abrasives-page > h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 2rem auto 4rem auto;
+  color: #0f172a;
+  position: relative;
+  text-transform: uppercase;
+  text-shadow: 0 6px 20px rgba(30, 58, 138, 0.25);
+}
+
+.super-abrasives-page > h1::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
+  margin: 1rem auto 0 auto;
+  border-radius: 2px;
+}
+
+/* ===== TEXT SECTIONS ===== */
+.super-text-section {
+  margin-bottom: 60px;
+}
+
+.super-enhanced-text {
+  max-width: 1100px;
+  margin: 0 auto 4rem auto;
+  padding: 2.5rem;
+}
+
+.super-text-block p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* ===== INFO CARD ===== */
+.super-info-card {
+  border: 1px solid #1e3a8a;
+  border-left: 5px solid #1e3a8a;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.super-info-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+
+/* ===== PRODUCT SECTION ===== */
+.super-product-section {
+  margin-bottom: 80px;
+}
+
+.super-range-text {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* ===== CARD GRID ===== */
+.super-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.super-image-card {
+  border: 1px solid #1e3a8a;
+  border-left: 5px solid #1e3a8a;
+  border-radius: 12px;
+  padding: 15px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.super-image-card:hover {
+  transform: translateY(-6px);
+}
+
+.super-image-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+}
+
+.super-image-card p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* ===== BACK BUTTON ===== */
+.super-back-btn-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.4rem;
+  margin: 1.5rem 0 2rem 0;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  box-shadow: 0 10px 30px rgba(30, 58, 138, 0.18);
+  transition: all 0.35s ease;
+}
+
+.super-back-icon {
+  transition: transform 0.35s ease;
+}
+
+.super-back-btn-wrapper:hover {
+  transform: translateX(-6px);
+  box-shadow: 0 16px 40px rgba(30, 58, 138, 0.3);
+}
+
+.super-back-btn-wrapper:hover .super-back-icon {
+  transform: translateX(-4px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .super-abrasives-page {
+    padding: 40px 5%;
+  }
+
+  .super-abrasives-page > h1 {
+    font-size: 2.2rem;
+  }
+}

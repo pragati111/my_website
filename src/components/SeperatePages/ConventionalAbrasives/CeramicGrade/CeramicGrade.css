@@ -1,0 +1,71 @@
+.product-back-button {
+  display: inline-flex;
+  align-items: center;
+  position:fixed;
+  gap: 8px;
+
+  width: fit-content;   /* 🔥 THIS FIXES THE LONG BUTTON */
+
+  background: white;
+  color: #2c4a9a;
+
+  padding: 12px 22px;
+  border-radius: 40px;
+
+  font-weight: 600;
+  font-size: 15px;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  margin: 30px 8%;
+}
+
+
+.product-back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.product-back-icon {
+  stroke: #2c4a9a;
+}
+
+
+.gq-page-wrapper {
+  padding: 60px 8%;
+  display: flex;
+  justify-content: center;
+}
+
+.gq-content-box {
+  max-width: 900px;
+  border: 2px solid #000;
+  border-radius: 16px;
+  padding: 40px;
+}
+
+.gq-content-box h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.gq-content-box p {
+  margin-bottom: 24px;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.gq-content-box h3 {
+  margin-bottom: 16px;
+}
+
+.gq-content-box ul {
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.gq-content-box li {
+  margin-bottom: 10px;
+}

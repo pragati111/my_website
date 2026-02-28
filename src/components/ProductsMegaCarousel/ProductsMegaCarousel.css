@@ -1,0 +1,253 @@
+
+.cards-heading {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 3rem;
+  color: black;
+  font-style: italic;
+}
+
+
+.reasons-title{
+  text-align: center;
+  color: black;
+  font-style: italic;
+}
+
+.reasons-title span{
+  text-align: center;
+  color: #5b6dff;
+  font-style: italic;
+}
+
+/* ===== OUTER SECTION ===== */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 20px 30px;
+  border-radius: 28px;
+  box-sizing: border-box;
+}
+
+/* ===== SLIDE CONTAINER ===== */
+.carousel-track {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ===== ARROWS ===== */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: #1a1a1a;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.arrow.left { left: 25px; }
+.arrow.right { right: 25px; }
+
+/* ===== CATEGORY SLIDE ===== */
+.category-slide {
+  background: linear-gradient(
+    125deg,
+    #e8cfed,
+    #147dec
+  );
+  border-radius: 24px;
+  padding: 20px;
+}
+
+/* ===== TITLE ===== */
+.category-slide h2 {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 42px;
+  background: linear-gradient(90deg, #1c6ed5, #58b4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.category-slide h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -14px;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #219e29, #24f604);
+  border-radius: 4px;
+}
+
+/* ===== LAYOUT ===== */
+.category-layout {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 40px;
+  align-items: center;
+}
+
+/* ===== LEFT CARD STRIP ===== */
+.category-cards {
+  position: relative;
+  padding: 34px;
+  background:linear-gradient(135deg,
+    #9b77f8,
+    #f0f7ff); 
+  border-radius: 22px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  cursor: grab;
+
+  /* hide scrollbar but keep scroll */
+  scrollbar-width: none;
+}
+.category-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.cards-track {
+  display: flex;
+  gap: 28px;
+  width: max-content;
+}
+
+
+.category-cards::-webkit-scrollbar {
+  height: 6px;
+}
+
+.category-cards::-webkit-scrollbar-thumb {
+  background: #cfdff5;
+  border-radius: 10px;
+}
+
+/* ===== FEATURED CARD PANEL ===== */
+.category-featured {
+  background: linear-gradient(135deg, #a5e4fb, #ffffff);
+  border-radius: 26px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.15);
+}
+
+/* Slight emphasis */
+.category-featured .container {
+  transform: scale(1.05);
+}
+
+
+.auto-scroll {
+  animation: marquee 30s linear infinite;
+}
+
+/* Pause auto-scroll when user interacts */
+.category-cards:hover .auto-scroll,
+.category-cards:active .auto-scroll {
+  animation-play-state: paused;
+}
+
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+.category-cards {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.category-cards::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ========================= */
+/* ===== RESPONSIVE ======= */
+/* ========================= */
+
+/* TABLETS */
+@media (max-width: 1199px) {
+  .carousel-wrapper {
+    padding: 60px 40px;
+  }
+
+  .category-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .category-featured {
+    margin-top: 36px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .carousel-wrapper {
+    padding: 40px 20px;
+    border-radius: 18px;
+  }
+
+  .arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    transform: none;
+  }
+
+  .arrow.left { left: 12px; }
+  .arrow.right { right: 12px; }
+
+  .category-slide {
+    padding: 30px 20px;
+  }
+
+  .category-slide h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .category-cards {
+    padding: 22px;
+    gap: 20px;
+  }
+
+  .category-cards .container {
+    min-width: 240px;
+  }
+
+  .category-featured {
+    padding: 22px;
+  }
+
+  .category-featured .container {
+    transform: scale(1);
+  }
+}

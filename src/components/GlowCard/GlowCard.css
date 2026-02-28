@@ -1,0 +1,111 @@
+:root {
+  --backdrop: hsl(0 0% 60% / 0.12);
+  --radius: 14;
+  --border: 3;
+  --backup-border: var(--backdrop);
+  --size: 200;
+}
+
+/* ================= CARD ================= */
+.glow-card {
+  width: 260px;
+  aspect-ratio: 3 / 4;
+  padding: 1rem;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  color: black;
+}
+
+/* ================= IMAGE ================= */
+.glow-image {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.glow-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= CONTENT ================= */
+.glow-content {
+  z-index: 2;
+}
+
+.glow-content h3 {
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+  color: black;
+}
+
+.glow-content p {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ================= BUTTON ================= */
+.glow-card button {
+  margin-top: auto;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.glow-card button span {
+  font-weight: bold;
+  color: black;
+}
+
+/* ================= GLOW CORE ================= */
+[data-glow] {
+  --border-size: 3px;
+  --spotlight-size: 200px;
+
+  background-image: radial-gradient(
+    var(--spotlight-size) var(--spotlight-size) at
+    var(--x, 0px) var(--y, 0px),
+    var(--glow-color, rgba(0, 140, 255, 0.18)),
+    transparent
+  );
+
+  background-color: var(--backdrop);
+  border: var(--border-size) solid var(--backup-border);
+  position: relative;
+}
+
+/* ================= INNER GLOW ================= */
+[data-glow]::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: inherit;
+  background-image: radial-gradient(
+    calc(var(--spotlight-size) * 0.75)
+    calc(var(--spotlight-size) * 0.75) at
+    var(--x, 0px) var(--y, 0px),
+    var(--glow-color, rgba(0, 140, 255, 0.6)),
+    transparent
+  );
+  filter: blur(22px);
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* ================= OUTER GLOW LAYER ================= */
+[data-glow] > span[data-glow] {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}

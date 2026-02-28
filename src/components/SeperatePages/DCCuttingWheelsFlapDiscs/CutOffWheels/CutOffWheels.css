@@ -1,0 +1,224 @@
+/*Main Heading styling*/
+.ceramic-page > h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 2rem auto 4rem auto;
+  color: #0f172a;
+  position: relative;
+  text-transform: uppercase;
+}
+
+/* Decorative underline */
+.ceramic-page > h1::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
+  margin: 1rem auto 0 auto;
+  border-radius: 2px;
+}
+
+/* Soft glow effect for premium feel */
+.ceramic-page > h1 {
+  text-shadow: 0 6px 20px rgba(30, 58, 138, 0.25);
+}
+
+/* ================= Premium Back Button ================= */
+
+.back-btn-wrapper {
+  position: fixed;              /* 🔥 key */
+  left: 32px;                   /* moves it slightly to the right */
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.4rem;
+  margin: 1.5rem 0 2rem 0;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 999px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e3a8a;
+
+  box-shadow: 0 10px 30px rgba(30, 58, 138, 0.18);
+  transition: all 0.35s ease;
+}
+
+/* Arrow icon */
+.back-icon {
+  transition: transform 0.35s ease;
+}
+
+/* Hover animation */
+.back-btn-wrapper:hover {
+  transform: translateX(-6px);
+  box-shadow: 0 16px 40px rgba(30, 58, 138, 0.3);
+}
+
+.back-btn-wrapper:hover .back-icon {
+  transform: translateX(-4px);
+}
+
+/* Active click */
+.back-btn-wrapper:active {
+  transform: scale(0.96);
+}
+
+/*back btn styling ends here*/
+
+.ceramic-layout {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  align-items: stretch; /* 🔥 forces equal height columns */
+}
+
+
+.dc-text-block p {
+  margin-bottom: 12px;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+
+/* LEFT */
+.left-section {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%; /* 🔥 critical */
+}
+
+
+.main-display {
+  flex: 1;                 /* 🔥 takes remaining height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 12px;
+}
+
+
+.main-display img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+/* THUMBNAILS */
+.thumbnail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 12px;
+}
+
+.thumbnail {
+  height: 80px;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail.active {
+  border-color: #555;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RIGHT */
+.right-section {
+  flex: 1;
+  border: 2px solid white;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.right-section h2 {
+  margin-bottom: 12px;
+}
+
+.right-section p {
+  line-height: 1.6;
+}
+/* ================= MOBILE VIEW ================= */
+@media (max-width: 768px), 
+       (hover: none) and (pointer: coarse) {
+
+  /* Overall layout becomes vertical */
+  .ceramic-layout {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  /* LEFT section first */
+  .left-section {
+    order: 1;
+  }
+
+  /* Thumbnails ABOVE main image */
+  .thumbnail-grid {
+    order: 2;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    margin-bottom: 12px;
+  }
+
+  .thumbnail {
+    height: 60px;
+  }
+
+  /* Main image BELOW thumbnails */
+  .main-display {
+    order: 1;
+    height: 280px !important;
+  }
+
+  /* RIGHT section (text) comes LAST */
+  .right-section {
+    order: 2;
+    margin-top: 20px;
+    padding: 16px;
+  }
+
+  /* Headings scale down nicely */
+  .ceramic-page > h1 {
+    padding-top: 100px;
+    font-size: 2rem;
+    margin: 1.5rem auto 2.5rem auto;
+  }
+
+  .right-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .dc-text-block p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Back button safe for mobile */
+  .back-btn-wrapper {
+    left: 16px;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,159 @@
+.footer-wrapper {
+  position: relative;
+  padding: 0 0 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* MAIN CONTAINER */
+.footer-container {
+  position: relative;   /* IMPORTANT */
+  z-index: 1;           /* Lower than CTA */
+
+  width: 95%;
+  border-radius: 35px;
+  padding: 70px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1.5px solid rgba(254, 254, 11, 0.6);
+  box-shadow:
+    0 0 25px rgba(106, 162, 255, 0.4),
+    inset 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+/* CTA BOX */
+.footer-cta {
+  position: absolute;
+  top: 0;                /* adjust if needed */
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 5;            /* Higher than container */
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1.5px solid rgba(242, 213, 24, 0.6);
+  border-radius: 18px;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  box-shadow: 0 10px 30px rgba(245, 46, 46, 0.2);
+}
+
+
+.cta-text span {
+  color: black;
+  display: block;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.cta-text strong {
+  color: black;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* Mail Bounce Animation */
+.cta-icon {
+  font-size: 22px;
+  animation: bounceMail 2s infinite;
+}
+
+@keyframes bounceMail {
+  0%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-6px); }
+  50% { transform: translateY(0); }
+  70% { transform: translateY(-3px); }
+}
+
+/* Left Section */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  max-width: 65%;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 15px;
+  color: #1a1a1a;
+}
+
+.footer-icon {
+  font-size: 20px;
+}
+
+/* Logo */
+.footer-logo {
+  width: 240px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-email {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.footer-email a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.footer-email a:hover {
+  color: #6aa2ff;
+}
+
+.footer-logo-link {
+  display: inline-block;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-wrapper {
+    position: relative;
+    padding: 80px 0 80px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .footer-container {
+    margin-top: 10rem;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .footer-left {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .footer-item {
+    flex-direction: column;
+  }
+
+  .footer-cta {
+    margin-top: 10rem;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

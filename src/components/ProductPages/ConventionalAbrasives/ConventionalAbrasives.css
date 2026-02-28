@@ -1,0 +1,282 @@
+.conventional-abrasives-page {
+  padding: 60px 8%;
+  color: #222;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/*Main Heading styling*/
+.conventional-abrasives-page > h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 2rem auto 4rem auto;
+  color: #0f172a;
+  position: relative;
+  text-transform: uppercase;
+}
+
+/* Decorative underline */
+.conventional-abrasives-page > h1::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
+  margin: 1rem auto 0 auto;
+  border-radius: 2px;
+}
+
+/* Soft glow effect for premium feel */
+.conventional-abrasives-page > h1 {
+  text-shadow: 0 6px 20px rgba(30, 58, 138, 0.25);
+}
+
+/*Main Heading styling ending here*/ 
+
+.text-section {
+  margin-bottom: 60px;
+}
+
+.text-section h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.text-section h3 {
+  font-size: 20px;
+  margin: 25px 0 10px;
+}
+
+.text-section p {
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.text-section ul {
+  padding-left: 20px;
+}
+
+.text-section li {
+  margin-bottom: 8px;
+}
+
+
+
+.enhanced-text {
+  max-width: 1100px;
+  margin: 0 auto 4rem auto;
+  padding: 2.5rem 2.5rem;
+}
+
+/* Section title */
+.enhanced-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+/* Normal paragraph block */
+.text-block p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Card-like blocks for lists */
+.info-card {
+  border: 1px solid #1e3a8a;
+  border-left: 5px solid #1e3a8a;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Card headings */
+.info-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+
+/* Lists */
+.info-card ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.info-card ul li {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+
+
+
+
+.product-section {
+  margin-bottom: 80px;
+}
+
+.product-section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.range-text {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* ===== CARD GRID ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* ===== IMAGE CARD ===== */
+.image-card {
+  border: 1px solid #1e3a8a;
+  border-left: 5px solid #1e3a8a;
+  border-radius: 12px;
+  padding: 15px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.image-card:hover {
+  transform: translateY(-6px);
+}
+
+.image-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: contain; /* KEY FOR DIFFERENT IMAGE SIZES */
+}
+
+.image-card p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+
+/* ================= Premium Back Button ================= */
+
+.back-btn-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.4rem;
+  margin: 1.5rem 0 2rem 0;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 999px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e3a8a;
+
+  box-shadow: 0 10px 30px rgba(30, 58, 138, 0.18);
+  transition: all 0.35s ease;
+}
+
+/* Arrow icon */
+.back-icon {
+  transition: transform 0.35s ease;
+}
+
+/* Hover animation */
+.back-btn-wrapper:hover {
+  transform: translateX(-6px);
+  box-shadow: 0 16px 40px rgba(30, 58, 138, 0.3);
+}
+
+.back-btn-wrapper:hover .back-icon {
+  transform: translateX(-4px);
+}
+
+/* Active click */
+.back-btn-wrapper:active {
+  transform: scale(0.96);
+}
+
+/*back btn styling ends here*/
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+    /*Main heading */
+    .conventional-abrasives-page > h1 {
+    padding-top: 100px;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+  }
+
+  .conventional-abrasives-page > h1::after {
+    width: 80px;
+  }
+  /*Main Heading styling end*/
+
+    .enhanced-text {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .enhanced-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .info-card {
+    padding: 1.2rem 1.4rem;
+  }
+
+  .info-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .text-block p,
+  .info-card ul li {
+    font-size: 0.95rem;
+  }
+
+  .conventional-abrasives-page {
+    padding: 40px 5%;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .text-section h2,
+  .product-section h2 {
+    font-size: 22px;
+  }
+
+  .back-btn-wrapper {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}

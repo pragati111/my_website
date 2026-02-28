@@ -1,0 +1,227 @@
+/* ================= PAGE WRAPPER ================= */
+
+.ceramic-page {
+  max-width: 1300px;
+  margin: 120px auto 60px auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* ================= HEADING ================= */
+
+.ceramic-page > h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 2rem auto 4rem auto;
+  color: #0f172a;
+  text-transform: uppercase;
+}
+
+/* ================= BACK BUTTON ================= */
+
+.back-btn-wrapper {
+  position: fixed;
+  top: 90px;
+  left: 32px;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.4rem;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 999px;
+  font-weight: 600;
+  color: #1e3a8a;
+  box-shadow: 0 10px 30px rgba(30, 58, 138, 0.18);
+  transition: all 0.35s ease;
+}
+
+.back-btn-wrapper:hover {
+  transform: translateX(-6px);
+}
+
+/* ================= MAIN LAYOUT ================= */
+
+.ceramic-layout {
+  display: flex;
+  gap: 30px;
+  padding: 24px;
+  height: 520px;     /* Same height for both */
+}
+
+/* ================= LEFT SECTION ================= */
+
+
+.left-section,
+.right-section {
+  flex: 0 0 50% !important;
+  max-width: 50% !important;
+  box-sizing: border-box;
+}
+
+/* Main image container */
+.main-display {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Image */
+.main-display img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+/* Thumbnails */
+.thumbnail-grid {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= RIGHT SECTION ================= */
+.right-section {
+  flex: 0 0 50%;          /* keep equal width */
+  max-width: 50%;
+  box-sizing: border-box;
+
+  height: 400px;          /* 👈 set fixed height (adjust if needed) */
+  overflow-y: auto;       /* 👈 enable vertical scroll */
+  overflow-x: hidden;
+
+  padding: 20px;
+
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgb(36, 1, 119) transparent;
+}
+/* Scrollbar styling (optional premium feel) */
+.right-section::-webkit-scrollbar {
+  width: 6px;
+}
+
+.right-section::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+
+/* Description text */
+.dc-text-block p {
+  margin-bottom: 14px;
+  line-height: 1.7;
+  font-size: 15px;
+}
+/* ================= MOBILE VIEW (FULL FIX) ================= */
+@media (max-width: 768px), 
+       (hover: none) and (pointer: coarse) {
+
+  /* Page spacing */
+  .ceramic-page {
+    max-width: 100%;
+    margin: 100px auto 40px auto;
+    padding: 0 16px;
+  }
+
+  /* Title */
+  .ceramic-page > h1 {
+    font-size: 2rem;
+    margin: 1.5rem auto 2rem auto;
+    padding-top: 60px;
+  }
+
+  /* Back button position */
+  .back-btn-wrapper {
+    top: 70px;
+    left: 16px;
+    padding: 0.6rem 1.2rem;
+    font-size: 14px;
+  }
+
+  /* 🔥 STACK LAYOUT */
+  .ceramic-layout {
+    flex-direction: column;
+    height: auto;
+    gap: 24px;
+    padding: 0;
+  }
+
+  /* Full width sections */
+  .left-section,
+  .right-section {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+    width: 100%;
+  }
+
+  /* Main image card */
+  .main-display {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  }
+
+  .main-display img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  /* Thumbnails */
+  .thumbnail-grid {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .thumbnail {
+    width: 64px;
+    height: 64px;
+  }
+
+  /* Description section (remove scroll box) */
+  .right-section {
+    height: auto !important;
+    overflow: visible !important;
+    padding: 18px;
+    border-radius: 14px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  }
+
+  .right-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  /* Text */
+  .dc-text-block p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}

@@ -1,0 +1,35 @@
+.Footer-container{
+    position: relative;
+}
+.Footer-container>hr{
+    border: 1px solid gray;
+}
+.footer{
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+}
+.social-links{
+    display: flex;
+    gap: 4rem;
+}
+.social-links>img{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+.logo-f>img{
+    width: 12rem;
+}
+.footer-info{
+    color: black;
+}
+@media screen and (max-width: 768px){
+    .logo-f>img{
+    width: 5rem;
+}
+}

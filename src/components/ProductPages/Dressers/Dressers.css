@@ -1,0 +1,203 @@
+.dressers-page {
+  padding: 60px 8%;
+  color: #222;
+}
+
+/* ===== MAIN HEADING ===== */
+.dressers-page > h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 2rem auto 4rem auto;
+  color: #0f172a;
+  position: relative;
+  text-transform: uppercase;
+  text-shadow: 0 6px 20px rgba(30, 58, 138, 0.25);
+}
+
+.dressers-page > h1::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
+  margin: 1rem auto 0 auto;
+  border-radius: 2px;
+}
+
+/* ===== TEXT SECTIONS ===== */
+.dressers-text-section {
+  margin-bottom: 60px;
+}
+
+.dressers-enhanced-text {
+  max-width: 1100px;
+  margin: 0 auto 4rem auto;
+  padding: 2.5rem;
+}
+
+.dressers-text-block p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* ===== INFO CARD ===== */
+.dressers-info-card {
+  border: 1px solid #1e3a8a;
+  border-left: 5px solid #1e3a8a;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.dressers-info-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+
+/* ===== PRODUCT SECTION ===== */
+.dressers-product-section {
+  margin-bottom: 80px;
+}
+
+.dressers-range-text {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* ===== CARD GRID ===== */
+.dressers-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.dressers-image-card {
+  border: 1px solid #1e3a8a;
+  border-left: 5px solid #1e3a8a;
+  border-radius: 12px;
+  padding: 15px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.dressers-image-card:hover {
+  transform: translateY(-6px);
+}
+
+.dressers-image-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+}
+
+.dressers-image-card p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* ===== BACK BUTTON ===== */
+.dressers-back-btn-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.4rem;
+  margin: 1.5rem 0 2rem 0;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  box-shadow: 0 10px 30px rgba(30, 58, 138, 0.18);
+  transition: all 0.35s ease;
+}
+
+.dressers-back-icon {
+  transition: transform 0.35s ease;
+}
+
+.dressers-back-btn-wrapper:hover {
+  transform: translateX(-6px);
+  box-shadow: 0 16px 40px rgba(30, 58, 138, 0.3);
+}
+
+.dressers-back-btn-wrapper:hover .dressers-back-icon {
+  transform: translateX(-4px);
+}
+
+
+/* ===== Dimension Table ===== */
+.dressers-table-wrapper {
+  margin: 2.5rem 0 3rem;
+}
+
+.dressers-table-heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+
+.dressers-dimension-table {
+  width: 100%;
+  border: 1px solid #1e3a8a; /* outer border */
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.dressers-dimension-table th,
+.dressers-dimension-table td {
+  padding: 0.9rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  /* 👇 THIS IS THE KEY PART */
+  border: 1px solid #c7d2fe; /* vertical + horizontal lines */
+}
+
+.dressers-dimension-table thead {
+  background: linear-gradient(90deg, #434759, #cfddfa);
+  color: white;
+}
+
+.dressers-dimension-table tbody tr {
+}
+
+.dressers-dimension-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.dressers-table-note {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .dressers-abrasives-page {
+    padding: 40px 5%;
+  }
+
+  .dressers-abrasives-page > h1 {
+    font-size: 2.2rem;
+  }
+}

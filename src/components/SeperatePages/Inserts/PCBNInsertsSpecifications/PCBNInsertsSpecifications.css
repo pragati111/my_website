@@ -1,0 +1,38 @@
+.pcbn-page-wrapper {
+  padding: 60px 8%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Back Button */
+.pcbn-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  width: fit-content;
+
+  background: white;
+  color: #2c4a9a;
+
+  padding: 12px 22px;
+  border-radius: 40px;
+
+  font-weight: 600;
+  font-size: 15px;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  margin: 30px 8%;
+}
+
+.pcbn-back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.pcbn-back-icon {
+  stroke: #2c4a9a;
+}

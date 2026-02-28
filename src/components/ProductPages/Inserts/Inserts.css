@@ -1,0 +1,443 @@
+.inserts-page {
+  padding: 60px 8%;
+  color: #222;
+}
+
+/* ===== MAIN HEADING ===== */
+.inserts-page > h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 2rem auto 4rem auto;
+  color: #0f172a;
+  position: relative;
+  text-transform: uppercase;
+  text-shadow: 0 6px 20px rgba(30, 58, 138, 0.25);
+}
+
+.inserts-page > h1::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
+  margin: 1rem auto 0 auto;
+  border-radius: 2px;
+}
+
+/* ===== TEXT SECTIONS ===== */
+.inserts-text-section {
+  margin-bottom: 60px;
+}
+
+.inserts-enhanced-text {
+  max-width: 1100px;
+  margin: 0 auto 4rem auto;
+  padding: 2.5rem;
+}
+
+.inserts-text-block p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* ===== INFO CARD ===== */
+.inserts-info-card {
+  border: 1px solid #1e3a8a;
+  border-left: 5px solid #1e3a8a;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.inserts-info-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+
+/* ===== PRODUCT SECTION ===== */
+.inserts-product-section {
+  margin-bottom: 80px;
+}
+
+.inserts-range-text {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* ===== CARD GRID ===== */
+.inserts-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.inserts-image-card {
+  border: 1px solid #1e3a8a;
+  border-left: 5px solid #1e3a8a;
+  border-radius: 12px;
+  padding: 15px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.inserts-image-card:hover {
+  transform: translateY(-6px);
+}
+
+.inserts-image-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+}
+
+.inserts-image-card p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* ===== BACK BUTTON ===== */
+.inserts-back-btn-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.4rem;
+  margin: 1.5rem 0 2rem 0;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  box-shadow: 0 10px 30px rgba(30, 58, 138, 0.18);
+  transition: all 0.35s ease;
+}
+
+.inserts-back-icon {
+  transition: transform 0.35s ease;
+}
+
+.inserts-back-btn-wrapper:hover {
+  transform: translateX(-6px);
+  box-shadow: 0 16px 40px rgba(30, 58, 138, 0.3);
+}
+
+.inserts-back-btn-wrapper:hover .super-back-icon {
+  transform: translateX(-4px);
+}
+
+/*for the table */
+.inserts-table-wrapper {
+  margin: 3rem 0;
+}
+
+.inserts-table-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+
+.inserts-dimension-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #1e3a8a;
+  border-radius: 10px;
+}
+
+.inserts-dimension-table th,
+.inserts-dimension-table td {
+  border: 1px solid #c7d2fe;
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.inserts-dimension-table thead {
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
+  color: #fff;
+}
+
+.inserts-table-section td {
+  background: #e0ecff;
+  font-weight: 700;
+  text-align: left;
+  color: #1e3a8a;
+}
+
+.inserts-table-note {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/*Accordion kind of animation for the table */
+.inserts-table-section {
+  background: #e8f4fb;
+  font-weight: 600;
+}
+
+.inserts-table-section.clickable {
+  cursor: pointer;
+}
+
+.inserts-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+.open {
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
+}
+.closed{
+  transition: transform 0.3s ease;
+}
+
+/*Inserts table second -- simple one*/
+/* ================= Inserts Table ================= */
+
+.inserts-table-wrapper {
+  margin-top: 3rem;
+  overflow-x: auto;
+}
+
+/* Center model content across all rows */
+.model-cell {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 500;
+  line-height: 1.8;
+  white-space: nowrap;
+}
+
+
+.inserts-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.inserts-table thead {
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
+  color: #fff;
+}
+
+.inserts-table th,
+.inserts-table td {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 0.95rem;
+  vertical-align: top;
+  display: table-cell;        /* CRITICAL */
+  vertical-align: middle;  
+}
+
+.inserts-table th {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.inserts-table tbody tr {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.inserts-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.inserts-table tbody tr:hover {
+  background-color: #f5f8ff;
+  transition: background 0.3s ease;
+}
+
+/*Hovering in second table*/
+/* ================= Controlled Hover Logic ================= */
+
+/* Reset any existing row hover */
+.inserts-table tbody tr:hover {
+  background-color: transparent;
+}
+
+/* Smooth hover transitions */
+.inserts-table td {
+  transition: background-color 0.25s ease;
+}
+
+/* ---------- CASE 1: Hover on NON-model columns ---------- */
+/* Highlight only the 6 non-model cells in the hovered row */
+.inserts-table tbody tr td:not(.model-cell):hover,
+.inserts-table tbody tr:hover td:not(.model-cell):hover {
+  background-color: #f5f8ff;
+}
+
+/* Ensure model cell does NOT highlight when hovering other columns */
+.inserts-table tbody tr:hover .model-cell {
+  background-color: transparent;
+}
+
+/* ---------- CASE 2: Hover on MODEL column ---------- */
+/* Highlight ONLY the model column (entire rowspan) */
+.inserts-table .model-cell:hover {
+  background-color: #f5f8ff;
+}
+
+/* ================= Table Grid Lines ================= */
+
+.inserts-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Header cells */
+.inserts-table th {
+  border: 1px solid #d9d9d9;
+  padding: 12px 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Body cells */
+.inserts-table td {
+  border: 1px solid #d9d9d9; /* vertical + horizontal lines */
+  padding: 10px 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/*for remarks ssection in the first table*/
+.remark-key {
+  font-weight: 700;
+  color: #0f172a;
+  background: #e5e7eb;
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.inserts-remark-row {
+  background: #f8fafc;
+  font-size: 0.9rem;
+}
+
+.remark-title {
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.remark-content div {
+  line-height: 1.6;
+}
+
+
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .inserts-abrasives-page {
+    padding: 30px 4%;
+  }
+
+  .inserts-abrasives-page > h1 {
+    font-size: 2rem;
+  }
+
+  /* ================= TABLE → CARD TRANSFORMATION ================= */
+
+  .mobile-card-table,
+  .mobile-card-table thead,
+  .mobile-card-table tbody,
+  .mobile-card-table tr,
+  .mobile-card-table th,
+  .mobile-card-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .mobile-card-table thead {
+    display: none;
+  }
+
+  .mobile-card-table td {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .mobile-card-table tr {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  }
+
+  .mobile-card-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* allow multi-line values to wrap */
+    padding: 6px 0;
+    font-size: 0.72rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    gap: 10px;
+    column-gap: 10px;
+  }
+
+  .mobile-card-table td:last-child { border-bottom: none; }
+
+  .mobile-card-table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: #334155;
+    flex: 0 0 36%; /* reserve fixed space for the label */
+    max-width: 40%;
+    text-align: left;
+    font-size: 0.62rem;
+    margin-right: 8px;
+    white-space: nowrap;
+  }
+
+  /* value area */
+  .mobile-card-table td > * { flex: 1 1 60%; text-align: right; }
+  /* for text nodes or multi-line content, ensure left alignment for model values */
+  .mobile-card-table td.model-cell-mobile { text-align: left; }
+
+  .inserts-table-image { width: 44px; height: auto; }
+
+  /* Hide mobile model cell on desktop (default) and show on mobile */
+  .model-cell { display: none; }
+  .model-cell-mobile { display: block; }
+
+  .model-cell-mobile { font-size: 0.72rem; line-height: 1.2; }
+
+  html, body { overflow-x: hidden; width: 100%; }
+  * { box-sizing: border-box; }
+}
+
+/* Desktop: hide the mobile-only model cell */
+.model-cell-mobile { display: none; }
+
+/* Ensure desktop/table behaviour wins over generic td rules */
+.inserts-table td.model-cell { display: table-cell !important; }
+.inserts-table td.model-cell-mobile { display: none !important; }
+
+/* Mobile-specific overrides to force correct show/hide on small screens */
+@media (max-width: 768px) {
+  .mobile-card-table td.model-cell { display: none !important; }
+  .mobile-card-table td.model-cell-mobile { display: block !important; }
+}
