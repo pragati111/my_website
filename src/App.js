@@ -1,7 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Hero from './components/Hero/Hero';
 import Header from './components/Header/Header';
 
 // Product pages
