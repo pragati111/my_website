@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from './components/Header/Header';
 import Reasons from './components/NewReasons/NewReasons';
 
-import IndustrialFooter from './components/IndustrialFooter/IndustrialFooter';
 import IndustriesWeServe from './components/IndustriesWeServe/IndustriesWeServe';
 import ScrollToTop from './ScrollToTop'
 import ProductRangePage from './pages/ProductRangePage'
@@ -12,6 +11,7 @@ import WhyUsPage from './pages/WhyUsPage'
 import ContactUsPage from './pages/ContactUsPage'
 import NewHero from './components/NewHero/NewHero';
 import ProcessSteps from './components/ProcessSteps/ProcessSteps';
+import Footer from './components/Footer/Footer';
 function Home() {
   return (
     <>
@@ -20,7 +20,7 @@ function Home() {
       <IndustriesWeServe/>
       <ProcessSteps/>
       <Reasons/>
-      <IndustrialFooter/> 
+      <Footer/>
     </>
   );
 }

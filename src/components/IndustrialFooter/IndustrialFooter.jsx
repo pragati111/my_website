@@ -11,7 +11,7 @@ const IndustrialFooter = () => {
       <div className="footer-cta">
         <div className="cta-text">
           <span>READY TO GET</span>
-          <strong>YOUR INDUSTRIAL SUPPLIES</strong>
+          <strong>YOUR WEBSITE</strong>
         </div>
         <div className="cta-icon">
           <a
