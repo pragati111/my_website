@@ -6,8 +6,9 @@ const ContactUsPage = () => {
   return (
     <>
       <Header />
-      <div style={{ minHeight: '70vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      </div>
+      <div></div>
+      <div></div>
+      <div></div>
       <IndustrialFooter />
     </>
   )

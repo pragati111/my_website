@@ -6,17 +6,17 @@ import Reasons from './components/NewReasons/NewReasons';
 
 import IndustriesWeServe from './components/IndustriesWeServe/IndustriesWeServe';
 import ScrollToTop from './ScrollToTop'
-import ProductRangePage from './pages/ProductRangePage'
-import WhyUsPage from './pages/WhyUsPage'
+import AboutUsPage from './pages/AboutUsPage'
+import OurWorkPage from './pages/OurWorkPage'
 import ContactUsPage from './pages/ContactUsPage'
-import NewHero from './components/NewHero/NewHero';
 import ProcessSteps from './components/ProcessSteps/ProcessSteps';
 import Footer from './components/Footer/Footer';
+import HeroSection from './components/HeroSection/HeroSection';
 function Home() {
   return (
     <>
       <Header/>
-      <NewHero/>
+      <HeroSection/>
       <IndustriesWeServe/>
       <ProcessSteps/>
       <Reasons/>
@@ -34,8 +34,8 @@ function App() {
           <Route path="/" element={<Home />} />
 
           {/* new top-level pages */}
-          <Route path="/products-range" element={<ProductRangePage/>} />
-          <Route path="/why-us" element={<WhyUsPage/>} />
+          <Route path="/about-us" element={<AboutUsPage/>} />
+          <Route path="/our-work" element={<OurWorkPage/>} />
           <Route path="/contact-us" element={<ContactUsPage/>} />
 
         </Routes>

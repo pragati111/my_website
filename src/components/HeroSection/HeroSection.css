@@ -1,0 +1,287 @@
+:root {
+  --primary-accent: #1a1a1a;
+  --text-muted: #5f6368;
+}
+
+.hero-section {
+  margin-top: 95px;
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-main);
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* Moving Background Blobs */
+.blob {
+  position: absolute;
+  filter: blur(100px);
+  z-index: 0;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+.blob-1 { width: 50vw; height: 50vw; background: #ffe8d6; top: -10%; right: -5%; }
+.blob-2 { width: 40vw; height: 40vw; background: #e0f2fe; bottom: -10%; left: -5%; }
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Navigation Tabs */
+.tab-navigation {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 15px 0;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+  position: relative;
+  opacity: 0.4;
+}
+
+.tab-btn.active {
+  opacity: 1;
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-accent);
+}
+
+.tab-id { display: block; font-size: 0.75rem; font-weight: 800; margin-bottom: 4px; }
+.tab-text { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* Typography */
+.hero-h1 {
+  font-size: 4.5rem;
+  font-weight: 850;
+  letter-spacing: -3px;
+  line-height: 1;
+  margin-bottom: 25px;
+  color: #111;
+}
+
+.hero-p {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 480px;
+}
+
+/* Buttons */
+.cta-wrapper { display: flex; gap: 15px; }
+.primary-btn {
+  background: #111;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(217, 82, 65, 0.3);
+}
+.secondary-btn{
+  background: white;
+  color: black;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(217, 82, 65, 0.3);
+}
+/* Browser Mockup */
+.browser-mockup {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 50px 100px -20px rgba(0,0,0,0.12);
+  border: 1px solid rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.browser-header {
+  background: #f1f1f1;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dots { display: flex; gap: 6px; }
+.dots span { width: 8px; height: 8px; border-radius: 50%; background: #ddd; }
+.address-bar {
+  flex-grow: 1;
+  background: white;
+  font-size: 11px;
+  text-align: center;
+  padding: 4px;
+  border-radius: 4px;
+  color: #999;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Simple Animation */
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsive Improvements --- */
+
+@media (max-width: 1024px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 40px;
+  }
+
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-h1 {
+    font-size: 3rem;
+    letter-spacing: -1.5px;
+  }
+}
+/* Add this at the very top of your CSS file to ensure padding doesn't add to width */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    margin-top: 60px;
+    padding: 20px 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevents the whole page from shaking/sliding */
+  }
+
+  .hero-inner {
+    display: flex; /* Switch from Grid to Flex for better mobile control */
+    flex-direction: column;
+    width: 100%;
+    padding: 0 15px;
+    gap: 30px;
+  }
+
+  /* --- THE TAB FIX --- */
+  .tab-navigation {
+    display: flex;
+    flex-direction: row; /* Force them side-by-side */
+    flex-wrap: nowrap;   /* PREVENT them from wrapping to next line */
+    overflow-x: auto;    /* ALLOW horizontal scrolling */
+    overflow-y: hidden;
+    width: calc(100% + 30px); /* Stretch to screen edges */
+    margin-left: -15px;       /* Offset parent padding */
+    padding: 0 15px 10px 15px; /* Bottom padding for the active-line */
+    gap: 25px;
+    justify-content: flex-start; /* CRUCIAL: Start from left so 03, 04, 05 exist to the right */
+    
+    /* Hide scrollbar but keep functionality */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; 
+  }
+
+  .tab-navigation::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-btn {
+    flex: 0 0 auto; /* CRUCIAL: Tells buttons "Do not shrink, stay your full size" */
+    width: auto;
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  /* --- TEXT & CONTENT FIX --- */
+  .text-content {
+    width: 100%;
+    text-align: left; /* Optional: 'center' often looks messy with long text on mobile */
+  }
+
+  .hero-h1 {
+    font-size: 2.2rem; /* Much smaller for mobile */
+    line-height: 1.1;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+  }
+
+  .hero-p {
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .cta-wrapper {
+    flex-direction: column; /* Stack buttons so they don't squash */
+    width: 100%;
+    gap: 12px;
+  }
+
+  .primary-btn, .secondary-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* --- IMAGE FIX --- */
+  .visual-content {
+    width: 100%;
+  }
+
+  .browser-mockup {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .tab-id{
+    display: none;
+  }
+  .tab-text{
+    display: none;
+  }
+}
