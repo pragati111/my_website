@@ -22,7 +22,7 @@ const HeroSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % data.length);
-    }, 2000); // Change slide every 4 seconds
+    }, 3000); // Change slide every 2 seconds
 
     return () => clearInterval(interval);
   }, []);

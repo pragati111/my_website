@@ -88,3 +88,28 @@
   color: #6b7280;
   line-height: 1.6;
 }
+
+@media (max-width: 768px) {
+  .new-reasons {
+    padding: 60px 4%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .new-reasons__container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .new-reasons__card {
+    padding: 30px 20px;
+  }
+
+  .new-reasons__title {
+    font-size: 18px;
+  }
+
+  .new-reasons__text {
+    font-size: 13px;
+  }
+}

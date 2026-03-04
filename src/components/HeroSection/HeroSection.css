@@ -22,9 +22,10 @@
   z-index: 0;
   border-radius: 50%;
   opacity: 0.6;
+  overflow: hidden;
 }
-.blob-1 { width: 50vw; height: 50vw; background: #ffe8d6; top: -10%; right: -5%; }
-.blob-2 { width: 40vw; height: 40vw; background: #e0f2fe; bottom: -10%; left: -5%; }
+.blob-1 { width: 50vw; height: 50vw; background: #ffe8d6; top: -10%; right: -10%; }
+.blob-2 { width: 40vw; height: 40vw; background: #e0f2fe; bottom: -10%; left: -10%; }
 
 .hero-inner {
   position: relative;
@@ -180,11 +181,7 @@
   }
 }
 /* Add this at the very top of your CSS file to ensure padding doesn't add to width */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+
 
 @media (max-width: 768px) {
   .hero-section {
@@ -192,6 +189,11 @@
     padding: 20px 0;
     width: 100%;
     overflow-x: hidden; /* Prevents the whole page from shaking/sliding */
+    overflow-y: visible;
+  }
+  
+  .blob-1, .blob-2 {
+    display: none;
   }
 
   .hero-inner {
