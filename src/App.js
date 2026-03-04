@@ -12,11 +12,13 @@ import ContactUsPage from './pages/ContactUsPage'
 import ProcessSteps from './components/ProcessSteps/ProcessSteps';
 import Footer from './components/Footer/Footer';
 import HeroSection from './components/HeroSection/HeroSection';
+import LeafSequence from './components/LeafSequence/LeafSequence';
 function Home() {
   return (
     <>
       <Header/>
       <HeroSection/>
+      <LeafSequence/>
       <IndustriesWeServe/>
       <ProcessSteps/>
       <Reasons/>
