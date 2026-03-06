@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from '../components/Header/Header'
-import IndustriesWeServe from '../components/IndustriesWeServe/IndustriesWeServe'
-import IndustrialFooter from '../components/IndustrialFooter/IndustrialFooter'
+import Footer from '../components/Footer/Footer'
 
 const WhyUsPage = () => {
   return (
@@ -10,7 +9,7 @@ const WhyUsPage = () => {
       <div></div>
       <div></div>
       <div></div>
-      <IndustrialFooter />
+      <Footer/>
     </>
   )
 }

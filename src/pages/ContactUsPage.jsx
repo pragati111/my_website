@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/Header/Header'
-import IndustrialFooter from '../components/IndustrialFooter/IndustrialFooter'
+import Footer from '../components/Footer/Footer'
 
 const ContactUsPage = () => {
   return (
@@ -9,7 +9,7 @@ const ContactUsPage = () => {
       <div></div>
       <div></div>
       <div></div>
-      <IndustrialFooter />
+      <Footer/>
     </>
   )
 }

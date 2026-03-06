@@ -51,8 +51,8 @@ const HeroSection = () => {
             <h1 className="hero-h1">{data[active].title}</h1>
             <p className="hero-p">{data[active].desc}</p>
             <div className="cta-wrapper">
-              <button className="primary-btn">Start Your Project</button>
-              <button className="secondary-btn">View Portfolio</button>
+              <button className="primary-btn">Industries We Serve</button>
+              <button className="secondary-btn">Technologies We Use</button>
             </div>
           </div>
         </div>

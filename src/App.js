@@ -13,6 +13,8 @@ import ProcessSteps from './components/ProcessSteps/ProcessSteps';
 import Footer from './components/Footer/Footer';
 import HeroSection from './components/HeroSection/HeroSection';
 import LeafSequence from './components/LeafSequence/LeafSequence';
+import TechSlider from './components/TechSlider/TechSlider';
+import FAQ from './components/FAQ/FAQ';
 function Home() {
   return (
     <>
@@ -20,8 +22,10 @@ function Home() {
       <HeroSection/>
       <LeafSequence/>
       <IndustriesWeServe/>
-      <ProcessSteps/>
+      <TechSlider/>
+      <ProcessSteps/>      
       <Reasons/>
+      <FAQ/>
       <Footer/>
     </>
   );
@@ -36,7 +40,7 @@ function App() {
           <Route path="/" element={<Home />} />
 
           {/* new top-level pages */}
-          <Route path="/about-us" element={<AboutUsPage/>} />
+          <Route path="/pricing" element={<AboutUsPage/>} />
           <Route path="/our-work" element={<OurWorkPage/>} />
           <Route path="/contact-us" element={<ContactUsPage/>} />
 

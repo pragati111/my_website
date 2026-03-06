@@ -1,0 +1,142 @@
+.faq-section {
+  padding: 110px 6%;
+  text-align: center;
+}
+
+/* title */
+
+.faq-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.faq-title span {
+  color: #4f46e5;
+}
+
+.faq-subtitle {
+  color: #666;
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 60px;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* container */
+
+.faq-container {
+  max-width: 850px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* item */
+
+.faq-item {
+  background: linear-gradient(
+    135deg,
+    rgb(213, 196, 173) 0%,
+    #ffffff 100%
+  );
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: all 0.35s ease;
+  box-shadow: 
+    0 10px 25px rgba(0,0,0,0.05),
+    0 2px 5px rgba(0,0,0,0.03);
+}
+
+/* hover */
+
+.faq-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 20px 45px rgba(0,0,0,0.08),
+    0 5px 12px rgba(0,0,0,0.05);
+}
+
+/* active state */
+
+.faq-item.active {
+  border-color: #4f46e5;
+  box-shadow: 0 12px 40px rgba(79,70,229,0.12);
+}
+
+/* question */
+
+.faq-question {
+  padding: 24px 28px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question h3 {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  color: #222;
+}
+
+/* icon */
+
+.faq-icon {
+  font-size: 26px;
+  font-weight: 600;
+  color: #4f46e5;
+  transition: transform 0.35s ease;
+}
+
+.faq-icon.rotate {
+  transform: rotate(45deg);
+}
+
+/* answer */
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease, padding 0.35s ease;
+}
+
+.faq-answer p {
+  padding: 0 28px;
+  text-align: left;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* active answer */
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding-bottom: 26px;
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+
+  .faq-title {
+    font-size: 30px;
+  }
+
+  .faq-subtitle {
+    font-size: 15px;
+  }
+
+  .faq-question {
+    padding: 20px 22px;
+  }
+
+  .faq-question h3 {
+    font-size: 16px;
+  }
+
+}
