@@ -1,6 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./ContactUsPage.css";
 import emailjs from "@emailjs/browser";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 const ContactUsPage = () => {
   const [toast, setToast] = useState({ show: false, type: "success", message: "" });
@@ -39,6 +41,8 @@ const ContactUsPage = () => {
   };
 
   return (
+    <>
+    <Header/>
     <section className="contact-section">
 
       <div className="contact-container">
@@ -119,6 +123,8 @@ const ContactUsPage = () => {
       </div>
 
     </section>
+    <Footer/>
+    </>
   );
 };
 

@@ -1,4 +1,5 @@
 .contact-section{
+  margin-top: 40px;
   padding:100px 20px;
   background:transparent;
   display:flex;
@@ -8,10 +9,30 @@
 .contact-container{
   max-width:900px;
   width:100%;
-  background:white;
   padding:60px;
   border-radius:20px;
-  box-shadow:0 20px 60px rgba(0,0,0,0.08);
+
+  /* Gradient glass background */
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.25),
+    rgba(255,255,255,0.08)
+  );
+
+  /* Glass effect */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  /* Glass border */
+  border:1px solid rgba(255,255,255,0.3);
+
+  /* Premium shadow */
+  box-shadow:0 20px 60px rgba(0,0,0,0.15);
+
+  /* Animation */
+  opacity:0;
+  transform: translateY(60px);
+  animation: formFadeUp 0.9s ease forwards;
 }
 
 .contact-title{
@@ -64,12 +85,14 @@
   position:absolute;
   left:16px;
   top:18px;
-  color:#777;
+  color:#241b1b;
   font-size:14px;
   pointer-events:none;
   transition:0.25s;
   background:white;
   padding:0 6px;
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,0.1);
 }
 
 .form-group input:focus + label,
@@ -221,5 +244,16 @@
   to {
     opacity: 1;
     transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+@keyframes formFadeUp {
+  from{
+    opacity:0;
+    transform: translateY(60px);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0);
   }
 }

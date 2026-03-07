@@ -25,7 +25,7 @@ const Header = () => {
          </div>):
          <ul className='header-menu' style={mobile && !menuOpened ? {display: 'none'} : {}}>
         <li><button onClick={() => handleNavigation('/')} style={{border: 'none', background: 'none', cursor: 'pointer', fontSize: 'inherit', color: 'inherit', fontFamily: 'inherit'}}>Home</button></li>              
-        <li><button onClick={() => handleNavigation('/our-work')} style={{border: 'none', background: 'none', cursor: 'pointer', fontSize: 'inherit', color: 'inherit', fontFamily: 'inherit'}}>Our Recent Work and Testimonials</button></li>
+        <li><button onClick={() => handleNavigation('/our-work')} style={{border: 'none', background: 'none', cursor: 'pointer', fontSize: 'inherit', color: 'inherit', fontFamily: 'inherit'}}>Our Recent Work</button></li>
         <li><button onClick={() => handleNavigation('/pricing')} style={{border: 'none', background: 'none', cursor: 'pointer', fontSize: 'inherit', color: 'inherit', fontFamily: 'inherit'}}>Pricing</button></li>  
         <li><button onClick={() => handleNavigation('/contact-us')} style={{border: 'none', background: 'none', cursor: 'pointer', fontSize: 'inherit', color: 'inherit', fontFamily: 'inherit'}}>Contact Us</button></li>
       </ul>
