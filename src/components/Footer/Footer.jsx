@@ -1,9 +1,24 @@
 import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './Footer.css';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import Logo from "../../assets/logo.png"
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+
+  const goHome = () => {
+    if (pathname === "/") {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    } else {
+      navigate("/");
+    }
+  };
+
+  const goToOurWork = () => navigate("/our-work");
+  const goToPricing = () => navigate("/pricing");
+
   return (
     <footer className="footer-wrapper">
       <div className="footer-container">
@@ -54,9 +69,21 @@ const Footer = () => {
           <div className="footer-col">
             <h4>Quick Links</h4> {/* Put Google Page and LinkedIn links here  */}
             <ul className="footer-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#our-work">Our Work</a></li>
+              <li>
+                <button type="button" className="footer-link" onClick={goHome}>
+                  Home
+                </button>
+              </li>
+              <li>
+                <button type="button" className="footer-link" onClick={goToOurWork}>
+                  Our Work
+                </button>
+              </li>
+              <li>
+                <button type="button" className="footer-link" onClick={goToPricing}>
+                  Our Pricing
+                </button>
+              </li>
             </ul>
           </div>
         </div>

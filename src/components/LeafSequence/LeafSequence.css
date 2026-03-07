@@ -100,6 +100,10 @@
   gap: 10px;
   cursor: pointer;
 }
+.cta-btn:hover {
+  background: #333;
+  cursor: pointer;
+}
 
 .arrow {
   background: white;

@@ -15,17 +15,33 @@ import HeroSection from './components/HeroSection/HeroSection';
 import LeafSequence from './components/LeafSequence/LeafSequence';
 import TechSlider from './components/TechSlider/TechSlider';
 import FAQ from './components/FAQ/FAQ';
+import ScrollReveal from './components/ScrollReveal/ScrollReveal';
+
 function Home() {
   return (
     <>
       <Header/>
-      <HeroSection/>
-      <LeafSequence/>
-      <IndustriesWeServe/>
-      <TechSlider/>
-      <ProcessSteps/>      
-      <Reasons/>
-      <FAQ/>
+      <ScrollReveal>
+        <HeroSection/>
+      </ScrollReveal>
+      <ScrollReveal>
+        <LeafSequence/>
+      </ScrollReveal>
+      <ScrollReveal>
+        <IndustriesWeServe/>
+      </ScrollReveal>
+      <ScrollReveal>
+        <TechSlider/>
+      </ScrollReveal>
+      <ScrollReveal>
+        <ProcessSteps/>
+      </ScrollReveal>
+      <ScrollReveal>
+        <Reasons/>
+      </ScrollReveal>
+      <ScrollReveal>
+        <FAQ/>
+      </ScrollReveal>
       <Footer/>
     </>
   );
