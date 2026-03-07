@@ -23,12 +23,18 @@ const PricingPage = () => {
         <div className="pricing-card">
 
           <div className="price-range">
-            ₹5,000 <span>—</span> ₹50,000
+            ₹5,000 <span>—</span> ₹90,000
           </div>
+
 
           <p className="price-description">
             Whether you need a simple business website or a fully customized
             feature-rich platform, we create solutions tailored to your needs.
+          </p>
+
+          
+          <p className="price-description2">
+            Pricing depends on the number of pages and the features required for your website.
           </p>
 
           <div className="pricing-features">
