@@ -252,3 +252,56 @@
   border-radius:10px;
 }
 
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+  .ourwork-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;
+    margin-top: 20px;
+  }
+
+  .work-card,
+  .feedback-card {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    padding: 24px;
+  }
+
+  .work-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .work-image {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+  }
+
+  .work-text li {
+    font-size: 12px;
+  }
+
+  .work-text p {
+    font-size: 14px;
+  }
+
+  .feedback-image {
+    height: auto;
+  }
+
+  .feedback-image img {
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .card-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
