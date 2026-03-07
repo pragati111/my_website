@@ -6,7 +6,7 @@ import Reasons from './components/NewReasons/NewReasons';
 
 import IndustriesWeServe from './components/IndustriesWeServe/IndustriesWeServe';
 import ScrollToTop from './ScrollToTop'
-import AboutUsPage from './pages/AboutUsPage'
+import PricingPage from './pages/PricingPage'
 import OurWorkPage from './pages/OurWorkPage'
 import ContactUsPage from './pages/ContactUsPage'
 import ProcessSteps from './components/ProcessSteps/ProcessSteps';
@@ -40,7 +40,7 @@ function App() {
           <Route path="/" element={<Home />} />
 
           {/* new top-level pages */}
-          <Route path="/pricing" element={<AboutUsPage/>} />
+          <Route path="/pricing" element={<PricingPage/>} />
           <Route path="/our-work" element={<OurWorkPage/>} />
           <Route path="/contact-us" element={<ContactUsPage/>} />
 
