@@ -1,9 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./PricingPage.css";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 
 const PricingPage = () => {
+  const navigate = useNavigate();
+
+  const goToContact = () => {
+    navigate("/contact-us");
+  };
+
   return (
     <>
     <Header/>
@@ -47,7 +54,7 @@ const PricingPage = () => {
 
           </div>
 
-          <button className="pricing-btn">
+          <button className="pricing-btn" type="button" onClick={goToContact}>
             Get Your Quote
           </button>
 

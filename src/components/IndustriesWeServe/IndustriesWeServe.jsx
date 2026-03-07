@@ -202,7 +202,7 @@ const Reasons = () => {
   };
 
   return (
-    <section className="reasons-section">
+    <section id="industries-we-serve" className="reasons-section">
       <h2 className="reasons-title">
         Industries <span>We Serve</span>
       </h2>

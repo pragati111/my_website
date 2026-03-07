@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./LeafSequence.css";
 
 import img2 from "../../assets/ran1.png";
@@ -6,6 +7,12 @@ import img1 from "../../assets/ran2.png";
 import logo from "../../assets/logo.png";
 
 const LeafSequence = () => {
+  const navigate = useNavigate();
+
+  const goToContact = () => {
+    navigate("/contact-us");
+  };
+
   return (
     <div className="hero-outer">
       <div className="hero-container">
@@ -44,7 +51,7 @@ const LeafSequence = () => {
                 to established brands — we create websites that deliver results.
             </p>
 
-            <button className="cta-btn">
+            <button className="cta-btn" type="button" onClick={goToContact}>
                 Get Your Website
                 <span className="arrow">→</span>
             </button>

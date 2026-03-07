@@ -3,12 +3,12 @@ import "./TechSlider.css";
 
 const TechSlider = () => {
   return (
-    <>
-    <div className="process-header">
+    <section id="technologies-we-use">
+      <div className="process-header">
         <h2>Technologies <span className="highlight">We Use</span></h2>
         <p>Powering modern websites with the robust MERN stack to deliver fast, scalable, and reliable web applications.</p>
       </div>
-    <div className="slider">
+      <div className="slider">
       
       <div className="slide-track">
 
@@ -71,8 +71,8 @@ const TechSlider = () => {
         </div>
 
         </div>
-    </div>
-    </>
+      </div>
+    </section>
   );
 };
 

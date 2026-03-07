@@ -18,6 +18,13 @@ const data = [
 const HeroSection = () => {
   const [active, setActive] = useState(2);
 
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   // ✅ AUTO ROTATE
   useEffect(() => {
     const interval = setInterval(() => {
@@ -51,8 +58,18 @@ const HeroSection = () => {
             <h1 className="hero-h1">{data[active].title}</h1>
             <p className="hero-p">{data[active].desc}</p>
             <div className="cta-wrapper">
-              <button className="primary-btn">Industries We Serve</button>
-              <button className="secondary-btn">Technologies We Use</button>
+              <button
+                className="primary-btn"
+                onClick={() => scrollToSection("industries-we-serve")}
+              >
+                Industries We Serve
+              </button>
+              <button
+                className="secondary-btn"
+                onClick={() => scrollToSection("technologies-we-use")}
+              >
+                Technologies We Use
+              </button>
             </div>
           </div>
         </div>
