@@ -16,6 +16,7 @@ import LeafSequence from './components/LeafSequence/LeafSequence';
 import TechSlider from './components/TechSlider/TechSlider';
 import FAQ from './components/FAQ/FAQ';
 import ScrollReveal from './components/ScrollReveal/ScrollReveal';
+import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
 
 function Home() {
   return (
@@ -61,6 +62,7 @@ function App() {
           <Route path="/contact-us" element={<ContactUsPage/>} />
 
         </Routes>
+        <WhatsAppButton />
       </div>
     </BrowserRouter>
   );
