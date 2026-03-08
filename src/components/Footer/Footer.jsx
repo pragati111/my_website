@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
           {/* Styled the <a> directly to behave like a button */}
           <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=pragatinov@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@websitedesignersjaipur.com"
             target="_blank"
             rel="noopener noreferrer"
             className="cta-btn-link"
@@ -55,7 +55,7 @@ const Footer = () => {
               <Phone size={18} className="icon" /> <span>+91-9929988684</span>
             </div>
             <div className="contact-item">
-              <Mail size={18} className="icon" /> <span>pragatinov@gmail.com</span>
+              <Mail size={18} className="icon" /> <span>contact@websitedesignersjaipur.com</span>
             </div>
             <div className="contact-item">
               <MapPin size={18} className="icon" />
